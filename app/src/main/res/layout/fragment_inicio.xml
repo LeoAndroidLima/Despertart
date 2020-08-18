@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".fragment.InicioFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/textView_Nome_App"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="16dp"
+                            style="@style/TemaTituloTexto"
+                            android:text="@string/app_name"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                            android:textColor="@color/colorBranco"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_HomeFragment_FraseDoDia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_Nome_App"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="16dp"
+                            android:text="Frase..."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBranco"
+                            android:textStyle="bold|italic" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_HomeFragment_FraseDoDia"
+                            android:layout_margin="16dp"
+                            app:cardCornerRadius="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.smarteist.autoimageslider.SliderView
+                                    android:id="@+id/imageSlider_home"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="176dp"
+                                    app:sliderAnimationDuration="600"
+                                    app:sliderAutoCycleDirection="back_and_forth"
+                                    app:sliderAutoCycleEnabled="true"
+                                    app:sliderIndicatorAnimationDuration="600"
+                                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                                    app:sliderIndicatorMargin="15dp"
+                                    app:sliderIndicatorOrientation="horizontal"
+                                    app:sliderIndicatorPadding="3dp"
+                                    app:sliderIndicatorRadius="2dp"
+                                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                                    app:sliderIndicatorUnselectedColor="#FFF"
+                                    app:sliderScrollTimeInSec="1"
+                                    app:sliderStartAutoCycle="true" />
+
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    style="@style/TemaTituloTexto"
+                    android:text="Categorias:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView__HomeFragment_ListaCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:scrollbars="none"
+                    android:fadeScrollbars="false"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

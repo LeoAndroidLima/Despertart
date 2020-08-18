@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Despertart</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_right_drawer">Right Drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Autenticação -->
+    <string name="login_entrar">Para obter acesso à sua <item><font fgcolor='#10A6AB'><u>Conta,</u></font></item> digite o seu <item><font fgcolor='#10A6AB'><u>e-mail</u></font></item> e sua <item><font fgcolor='#10A6AB'><u>senha.</u></font></item></string>
+    <string name="esqueceu_senha">Esqueceu sua <item><font fgcolor='#10A6AB'><u>Senha?</u></font></item></string>
+
+    <string name="reginstrar">Para criar uma <item><font fgcolor='#10A6AB'><u>Conta,</u></font></item> digite o seu <item><font fgcolor='#10A6AB'><u>e-mail</u></font></item> e sua <item><font fgcolor='#10A6AB'><u>senha.</u></font></item></string>
+
+    <string name="esqueci_senha">Para obter acesso à sua <item><font fgcolor='#10A6AB'><u>conta</u></font></item>, digite o seu <item><font fgcolor='#10A6AB'><u>e-mail</u></font></item>.</string>
+    <string name="termos_uso"> <item><font fgcolor='#10A6AB'><u>Termos de uso.</u></font></item></string>
+
+
+</resources>

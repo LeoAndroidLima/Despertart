@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:id="@+id/linerLayout_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_voltar_Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_seta_voltar_black_24dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView_Login_NomeLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="@style/TemaTituloTexto"
+                    android:text="Login"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    android:textColor="@color/colorBranco"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_Login_FraseLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout_Login"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/login_entrar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBranco"
+                android:textStyle="bold|italic" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_Login_FraseLogin"
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/colorBranco"
+                app:cardCornerRadius="6dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="36dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="E-mail:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/editText_Login_DigitarEmail"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="Digite o seu E-mail"
+                        android:inputType="textEmailAddress"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Senha:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/editText_Login_DigitarEmail"
+                        app:layout_constraintStart_toStartOf="@+id/editText_Login_DigitarEmail"
+                        app:layout_constraintTop_toBottomOf="@+id/editText_Login_DigitarEmail" />
+
+                    <EditText
+                        android:id="@+id/editText_Login_DigitarSenha"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Digite a sua senha"
+                        android:inputType="textPassword"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:layout_constraintEnd_toEndOf="@+id/textView4"
+                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView_Login_RecuperarSenha"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="@string/esqueceu_senha"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/editText_Login_DigitarSenha"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/editText_Login_DigitarSenha"
+                        app:layout_constraintTop_toBottomOf="@+id/editText_Login_DigitarSenha" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_Login_CLickEntrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_Login_RecuperarSenha">
+
+                        <TextView
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="Entrar"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorBranco"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="Ou"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView_Login_CLickEntrar"
+                        app:layout_constraintStart_toStartOf="@+id/cardView_Login_CLickEntrar"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView_Login_CLickEntrar" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_Login_ClickRegistrar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="@+id/textView7"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                        <TextView
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="Criar Conta"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorBranco"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

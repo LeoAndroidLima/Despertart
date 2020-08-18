@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragment.MinhaContaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/TemaTituloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Minha Conta"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/colorBranco"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Usuário"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Nome Completo"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_Nome"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite seu nome completo"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView12"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="CPF"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_MinhaConta_Nome"
+                    app:layout_constraintStart_toStartOf="@+id/editText_MinhaConta_Nome"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_Nome" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/maskedEditText_MinhaConta_Cpf"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="14"
+                    android:hint="Digite o seu cpf"
+                    android:inputType="number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView13"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    app:mask="###.###.###-##" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Número Contato"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/maskedEditText_MinhaConta_Cpf"
+                    app:layout_constraintStart_toStartOf="@+id/maskedEditText_MinhaConta_Cpf"
+                    app:layout_constraintTop_toBottomOf="@+id/maskedEditText_MinhaConta_Cpf" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/maskedEditText_MinhaConta_NumeroContato"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="14"
+                    android:hint="Digite o seu número"
+                    android:inputType="number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView14"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14"
+                    app:mask="(##)#####-####" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Endereço"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/maskedEditText_MinhaConta_NumeroContato"
+                    app:layout_constraintStart_toStartOf="@+id/maskedEditText_MinhaConta_NumeroContato"
+                    app:layout_constraintTop_toBottomOf="@+id/maskedEditText_MinhaConta_NumeroContato" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Cep"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView16"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/maskedEditText_MinhaConta_Cep"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="9"
+                    android:hint="Digite o seu cep"
+                    android:inputType="number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView17"
+                    app:layout_constraintStart_toStartOf="@+id/textView17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17"
+                    app:mask="#####-###" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Estado"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/maskedEditText_MinhaConta_Cep"
+                    app:layout_constraintStart_toStartOf="@+id/maskedEditText_MinhaConta_Cep"
+                    app:layout_constraintTop_toBottomOf="@+id/maskedEditText_MinhaConta_Cep" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_Estado"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite o seu estado"
+                    android:inputType="textPersonName"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cidade"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_MinhaConta_Estado"
+                    app:layout_constraintStart_toStartOf="@+id/editText_MinhaConta_Estado"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_Estado" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_Cidade"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a sua rua"
+                    android:inputType="textPersonName"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView19"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Bairro"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_MinhaConta_Cidade"
+                    app:layout_constraintStart_toStartOf="@+id/editText_MinhaConta_Cidade"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_Cidade" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_Bairro"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite o seu bairro"
+                    android:inputType="textPersonName"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView20"
+                    app:layout_constraintStart_toStartOf="@+id/textView20"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Rua"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_MinhaConta_Bairro"
+                    app:layout_constraintStart_toStartOf="@+id/editText_MinhaConta_Bairro"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_Bairro" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_Rua"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a sua rua"
+                    android:inputType="textPersonName"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView21"
+                    app:layout_constraintStart_toStartOf="@+id/textView21"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Número"
+                    android:paddingEnd="32dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/editText_MinhaConta_Rua"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_Rua" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_NumeroEndereco"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Numero"
+                    android:inputType="textPersonName"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView22"
+                    app:layout_constraintStart_toStartOf="@+id/textView22"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Complemento"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_MinhaConta_Rua"
+                    app:layout_constraintStart_toEndOf="@+id/textView22"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_Rua" />
+
+                <EditText
+                    android:id="@+id/editText_MinhaConta_ComplementoEndereco"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Opcional"
+                    android:inputType="textPersonName"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView23"
+                    app:layout_constraintStart_toStartOf="@+id/textView23"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_MinhaConta_Salvar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_MinhaConta_ComplementoEndereco"
+                    app:layout_constraintStart_toStartOf="@+id/editText_MinhaConta_NumeroEndereco"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_MinhaConta_ComplementoEndereco">
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Salvar"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorBranco"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

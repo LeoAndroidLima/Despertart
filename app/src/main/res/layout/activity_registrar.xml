@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.RegistrarActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:id="@+id/linerLayout_Registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_voltar_Registrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_seta_voltar_black_24dp"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_Registrar_NomeRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                style="@style/TemaTituloTexto"
+                android:text="Registrar"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/colorBranco"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_Registrar_FraseRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linerLayout_Registrar"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/reginstrar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorBranco"
+            android:textStyle="bold|italic" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_Registrar_FraseRegistrar"
+            android:layout_margin="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/colorBranco"
+            app:cardCornerRadius="6dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="36dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="E-mail:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editText_Registrar_DigitarEmail"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite o seu E-mail..."
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView5"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Senha:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_Registrar_DigitarEmail"
+                    app:layout_constraintStart_toStartOf="@+id/editText_Registrar_DigitarEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_Registrar_DigitarEmail" />
+
+                <EditText
+                    android:id="@+id/editText_Registrar_DigitarSenha"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Digite a sua senha..."
+                    android:inputType="textPassword"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView6"
+                    app:layout_constraintStart_toStartOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Repita sua senha:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_Registrar_DigitarSenha"
+                    app:layout_constraintStart_toStartOf="@+id/editText_Registrar_DigitarSenha"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_Registrar_DigitarSenha" />
+
+                <EditText
+                    android:id="@+id/editText_Registrar_RepetirSenha"
+                    style="@style/TemaTituloTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Repita sua senha..."
+                    android:inputType="textPassword"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView8"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_Registrar_TermosDeUso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Lê, e concordo com os"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/editText_Registrar_RepetirSenha"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_Registrar_RepetirSenha" />
+
+                <TextView
+                    android:id="@+id/textView_Registrar_ClickTermosDeUso"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center|left"
+                    android:text="@string/termos_uso"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox_Registrar_TermosDeUso"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/checkBox_Registrar_TermosDeUso"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox_Registrar_TermosDeUso" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_Login_ClickRegistrar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="@+id/textView_Registrar_ClickTermosDeUso"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_Registrar_TermosDeUso"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_Registrar_ClickTermosDeUso">
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Criar Conta"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorBranco"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

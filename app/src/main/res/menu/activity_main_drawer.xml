@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_preto_24dp"
+            android:title="Inicio"/>
+
+        <item
+            android:id="@+id/nav_entrar"
+            android:icon="@drawable/ic_conta_preto_24dp"
+            android:title="Entrar Conta"
+            android:checkable="false"
+            android:checked="false"/>
+
+        <item
+            android:id="@+id/nav_conta"
+            android:icon="@drawable/ic_conta_preto_24dp"
+            android:title="Minha Conta"/>
+
+        <item
+            android:id="@+id/nav_compras"
+            android:icon="@drawable/ic_carrinho_compra_preto_24dp"
+            android:title="Minhas Compras"/>
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_deslogar"
+                android:icon="@drawable/ic_sair_app_preto_24dp"
+                android:title="Deslogar"/>
+        </menu>
+    </item>
+
+</menu>

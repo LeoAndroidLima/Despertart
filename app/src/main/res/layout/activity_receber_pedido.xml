@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.ReceberPedidoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorPrimary"/>
+            
+            <LinearLayout
+                android:id="@+id/linearLayout_ReceberPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_ReceberPedido_Voltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_seta_voltar_black_24dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textView_ReceberPedido_Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="@style/TemaTituloTexto"
+                    android:text="Dados"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    android:textColor="@color/colorBranco"
+                    android:textStyle="bold" />
+                
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView_ReceberPedido_MercadoPago"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/linearLayout_ReceberPedido"
+                android:src="@drawable/mercado_pago"/>
+            
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView_ReceberPedido_MercadoPago"
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="6dp"
+                app:cardBackgroundColor="@color/colorBranco"
+                app:cardUseCompatPadding="true">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Dados De Entrega"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Nome Completo"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_ReceberPedido_NomeCliente"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Digite seu nome completo"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="CPF"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/maskedEditText_ReceberPedido_CpfCliente"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="14"
+                        android:hint="Digite o seu cpf"
+                        android:inputType="number"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:mask="###.###.###-##" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Número para contato"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/maskedEditText_ReceberPedido_NumeroContato"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="14"
+                        android:hint="Digite o seu número"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:inputType="number"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:mask="(##)#####-####" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Cep"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/maskedEditText_ReceberPedido_CepEndereco"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="9"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="Digite o seu cep"
+                        android:inputType="number"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        app:mask="#####-###" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Estado"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_ReceberPedido_EstadoCliente"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="Digite o seu estado"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Cidade"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_ReceberPedido_CidadeCliente"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="Digite a sua rua"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Bairro"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_ReceberPedido_BairroCliente"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="Digite o seu bairro"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <TextView
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Rua"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText_ReceberPedido_RuaCliente"
+                        style="@style/TemaTituloTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="Digite a sua rua"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Número"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Complemento"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editText_ReceberPedido_NumeroEndereco"
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:hint="Número "
+                            android:inputType="textPersonName"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <EditText
+                            android:id="@+id/editText_ReceberPedido_ComplementoEndereco"
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:hint="Complemento "
+                            android:inputType="textPersonName"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_ReceberPedido_ConfirmarDados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            style="@style/TemaTituloTexto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="Confirmar Dados"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorBranco"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+                
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

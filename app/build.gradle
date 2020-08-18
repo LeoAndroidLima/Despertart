@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.leoapps.despertart"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //---Firebase---
+    implementation 'com.google.firebase:firebase-analytics:17.4.2'
+    // Firebase Authentication implementation
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    // Cloud Messaging implementation
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+    // Cloud Firestore implementation
+    implementation 'com.google.firebase:firebase-firestore:21.4.3'
+
+    //Glide imagens
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //---MENU Lateral
+    implementation 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //Circular imageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Slide imagens
+    implementation 'com.github.smarteist:autoimageslider:1.3.5'
+
+    //SnackBar
+    implementation 'com.irozon.sneaker:sneaker:2.0.0'
+
+    //ProgressBar
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+
+    //MaskedEditText
+    implementation 'com.vicmikhailau:MaskedEditText:2.0.4'
+
+}

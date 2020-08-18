@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "92027188839",
+    "firebase_url": "https://despertart-882c9.firebaseio.com",
+    "project_id": "despertart-882c9",
+    "storage_bucket": "despertart-882c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92027188839:android:ad9b69c20d3f0fdb9606c2",
+        "android_client_info": {
+          "package_name": "com.leoapps.despertart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92027188839-qkqjvj7i57fd45q81jjt06r7mmn5us7c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.leoapps.despertart",
+            "certificate_hash": "7465af639530f20bc94a0c56575dc9de909a2610"
+          }
+        },
+        {
+          "client_id": "92027188839-i37174p4qrmrhai7mojm11o18p6d0q1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcExhfhxabMuQfQDewYEBLu6gkG2gk150"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92027188839-i37174p4qrmrhai7mojm11o18p6d0q1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
